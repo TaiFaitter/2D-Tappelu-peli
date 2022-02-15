@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 878205056}
   - component: {fileID: 878205055}
   - component: {fileID: 878205054}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3519,6 +3519,7 @@ GameObject:
   - component: {fileID: 2026902124}
   - component: {fileID: 2026902125}
   - component: {fileID: 2026902126}
+  - component: {fileID: 2026902127}
   m_Layer: 0
   m_Name: Horse
   m_TagString: Untagged
@@ -3666,4 +3667,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c396bafaa6aae468ecd7f93c7a9898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigidBody: {fileID: 0}
+  speed: 5
+  jumpForce: 7
+--- !u!95 &2026902127
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026902120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c357f522d5272fa4c9392a6c64b7dc25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
