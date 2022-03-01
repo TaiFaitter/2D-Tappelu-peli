@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     
     private Rigidbody2D myRigidBody;
     private CircleCollider2D myFeet;
+    private Animator animator;
 
     private LayerMask ground;
 
@@ -20,6 +21,7 @@ public class Movement : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myFeet = GetComponent<CircleCollider2D>();
+        animator = GetComponent<Animator>();
         ground = LayerMask.GetMask("Ground");
     }
 
@@ -39,5 +41,6 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         myRigidBody.velocity = new Vector2(horizontalMovement * speed, myRigidBody.velocity.y);
+        animator.SetFloat("speed", horizontalMovement);
     }
 }
