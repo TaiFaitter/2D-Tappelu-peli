@@ -35,6 +35,14 @@ public class Movement : MonoBehaviour
             // Impulse lis‰‰ kaiken voiman kerralla, jolloin se alkaa v‰hitellen v‰henty‰
             myRigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
+        if (myFeet.IsTouchingLayers(ground))
+        {
+            animator.SetBool("isTouchingGround", true);
+        }
+        else
+        {
+            animator.SetBool("isTouchingGround", false);
+        }
     }
 
     // Ei ota huomioon koneen tehoja p‰ivitysnopeudessa
