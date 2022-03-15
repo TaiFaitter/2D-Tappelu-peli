@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
 
     private LayerMask ground;
 
+    public float facing = 1f;
+
     public float speed = 5f;
     public float jumpForce = 7f;
     private float horizontalMovement = 0f;
