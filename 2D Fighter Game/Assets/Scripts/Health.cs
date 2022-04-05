@@ -6,7 +6,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     private float maxHealth = 100f;
-    private float currentHealth;
+    public float currentHealth;
 
     private float hitTimer = 0.15f;
     private bool isHit = false;
@@ -27,6 +27,23 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    public void TakeDamage(float damageTaken)
+    {
+        if (!isHit)
+        {
+            if (GetComponent<Fight>().blockCheck)
+            {
+                currentHealth -= damageTaken / 2;
+            }
+
+            else
+            {
+                currentHealth -= damageTaken;
+                StartCoroutine(KnockBack());
+            }
         }
     }
 
