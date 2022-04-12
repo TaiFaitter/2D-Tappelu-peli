@@ -16,5 +16,14 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
+    public override void OnConnectedToMaster()
+    {
+        PhotonNetwork.JoinLobby();
+    }
 
+    public override void OnJoinedLobby()
+    {
+        // Lainausmerkkeihin kirjoitetaan joko Scenen nimi tai sen indeksi
+        SceneManager.LoadScene("Lobby");
+    }
 }
